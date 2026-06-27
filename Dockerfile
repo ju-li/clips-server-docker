@@ -11,7 +11,7 @@ ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
 
 # Native build deps for any node-gyp modules pulled in during install
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends python3 make g++ ca-certificates \
+    && apt-get install -y --no-install-recommends python3 make g++ ca-certificates curl \
     && rm -rf /var/lib/apt/lists/*
 
 # pnpm is provided via corepack (version pinned by the scaffold's package.json)
